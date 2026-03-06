@@ -3,7 +3,7 @@ import path from "path"
 import routes from "./routes";
 
 const app: Application = express();
-const PORT: number = parseInt(<string>process.env.PORT, 10) || 3000;
+const PORT: number = 3000;
 
 app.use(express.static(path.join(__dirname, "/public")));
 app.use("/", routes);
