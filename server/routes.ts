@@ -11,4 +11,8 @@ router.get("/about", (req: Request, res: Response): void => {
     res.sendFile(path.join(__dirname,"views", "about.html"))
 })
 
+router.get("/details", (req: Request, res: Response): void => {
+    res.sendFile(path.join(__dirname,"views", "details.html"))
+})
+
 export default router;
