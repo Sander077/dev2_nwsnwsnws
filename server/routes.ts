@@ -7,12 +7,8 @@ router.get("/", (req: Request, res: Response): void => {
     res.sendFile(path.join(__dirname,"views", "index.html"))
 })
 
-router.get("/about", (req: Request, res: Response): void => {
-    res.sendFile(path.join(__dirname,"views", "about.html"))
-})
-
-router.get("/details", (req: Request, res: Response): void => {
-    res.sendFile(path.join(__dirname,"views", "details.html"))
+router.get("/detail", (req: Request, res: Response): void => {
+    res.sendFile(path.join(__dirname,"views", "detail.html"))
 })
 
 export default router;
