@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Artikel toevoegen</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Nieuw artikel</h1>
+
+      <form method="POST" action="/add">
+        <label>Titel</label>
+        <input type="text" name="title" required />
+
+        <label>Slug</label>
+        <input type="text" name="slug" required />
+
+        <label>Artikel</label>
+        <textarea name="content" rows="6"></textarea>
+
+        <button type="submit">Toevoegen</button>
+      </form>
+
+      <a class="back" href="/">← Terug</a>
+    </div>
+  </body>
+</html>
