@@ -3,7 +3,9 @@ import path from "path";
 import routes from "./routes";
 
 const app = express();
-const PORT = 3000;
+const PORT : number = parseInt(<string>process.env.PORT, 10) || 3000;
+
+app.set("views", path.join(__dirname, "views"));
 
 app.use(express.urlencoded({ extended: true }));
 
