@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
 import newsData from "./data/news.json";
+import { getAllNews } from "./services/newsService";
 
 interface NewsItem {
   slug: string;
@@ -12,7 +13,8 @@ const news: NewsItem[] = newsData as NewsItem[];
 
 const router = express.Router();
 
-router.get("/", (req: Request, res: Response) => {
+router.get("/", async (req: Request, res: Response) => {
+  const news = await getAllNews();
   res.render("index", { news });
 });
 
